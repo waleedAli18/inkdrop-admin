@@ -116,14 +116,17 @@ const UserManagement = () => {
   );
 
   const contentView = (
-    <CustomTable
+    <>
+      <h1>Test</h1>
+      {/* <CustomTable
       bordered
       data={UserManagementTableData}
       columns={columns}
       loading={gridPreLoader}
       pagination={pagination}
       scroll={{ x: 1400 }}
-    />
+    /> */}
+    </>
   );
 
   return (
