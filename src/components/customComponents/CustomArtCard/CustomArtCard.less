@@ -1,0 +1,75 @@
+@import url(../../../assets/styles/variables.less);
+
+.customArtCardWrapper {
+  display: inline-block;
+  margin-bottom: 20px;
+  .customArtCard {
+    width: 500px;
+    border-radius: 20px;
+    background: @white-color;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.12);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 15px;
+    overflow: hidden;
+    .img {
+      img {
+        height: 220px;
+        width: 220px;
+        border-radius: 32px;
+      }
+    }
+    .cont {
+      h3 {
+        color: @black-color;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+      p {
+        &.createdOn {
+          color: #595959;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin-bottom: 2px;
+        }
+      }
+
+      ul.ant-rate {
+        margin-right: 5px;
+        li.ant-rate-star {
+          margin-right: 2px !important;
+          svg {
+            font-size: 16px;
+            // color: $startColor;
+          }
+        }
+      }
+
+      .category {
+        margin-top: 10px;
+        h4 {
+          color: @black-color;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        span {
+          color: #595959;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-transform: capitalize;
+          display: inline-block;
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+}

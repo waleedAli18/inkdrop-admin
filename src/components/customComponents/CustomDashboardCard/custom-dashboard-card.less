@@ -1,0 +1,60 @@
+@import "../../../assets/styles/variables.less";
+
+.customCardDashboard {
+  background: @white-color;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.14);
+  padding: 20px !important;
+  margin: 0 15px !important;
+  margin-bottom: 25px !important;
+  overflow: hidden;
+  .ant-statistic-content-prefix {
+    display: flex !important;
+    align-items: center;
+    .aside {
+      display: flex !important;
+      align-items: center;
+      justify-content: space-between !important;
+      width: 100%;
+      > div {
+        display: flex;
+        align-items: center;
+        .fetchIcon {
+          border: unset;
+          padding: 0;
+          height: unset;
+          display: flex;
+          align-items: center;
+        }
+        .filterIcon {
+          border: 1px solid @light-primary-color;
+          background-color: @light-primary-color;
+          color: @white-color;
+          border-radius: 25px;
+        }
+      }
+    }
+  }
+  h5.primary-heading {
+    color: @black-color;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 10px;
+    text-transform: capitalize;
+    margin-bottom: 0;
+  }
+
+  .ant-statistic-content-value,
+  .ant-statistic-content-value > span {
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: @black-color;
+    font-size: 80px;
+    font-style: normal;
+    line-height: 1;
+    margin-top: 10px;
+    font-weight: 600;
+  }
+}

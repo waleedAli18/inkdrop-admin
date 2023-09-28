@@ -1,0 +1,102 @@
+.wheel-colorpicker-wrapper {
+  .selected-color {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+
+    & > div {
+      height: 35px;
+      width: 35px;
+      border-radius: 8px;
+    }
+  }
+
+  .aside {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 30px;
+    .label {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      //   margin-right: 40px;
+
+      label {
+        color: #595959;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      input {
+        height: 33px !important;
+        padding: 14px !important;
+        width: 100px;
+        max-height: 120px !important;
+      }
+    }
+    // .w-color-wheel {
+    //   height: 75px !important;
+    //   width: 75px !important;
+    // }
+    .selected-color {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// MEDIA QUERY STARTS
+
+// ##Device = HD Desktops
+// ##Screen = 1600px to higher resolution desktops
+
+@media screen and (min-width: 1600px) {
+} // Dont delete this bracket!
+
+// ##Device = Ipads, Ipad Pro
+// ##Screen = B/w 1024px to 1365px
+@media (min-width: 1024px) and (max-width: 1365px) {
+} //  1024px to 1365px Dont delete this bracket!
+
+// ##Device = Tablets, Ipads
+// ##Screen = B/w 768px to 1023px
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .wheel-colorpicker-wrapper {
+    .aside {
+      align-items: flex-start;
+      row-gap: 15px;
+      flex-direction: column;
+    }
+  }
+} //  768px to 1023px  Dont delete this bracket!
+
+// ##Device = Low Resolution Tablets, Mobiles (Landscape)
+// ##Screen = B/w 481px to 767px
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .wheel-colorpicker-wrapper {
+    .aside {
+      align-items: flex-start;
+      row-gap: 15px;
+      flex-direction: column;
+    }
+  }
+} //  481px to 767px (Landscape) Dont delete this bracket!
+
+// ##Device = Most of the Smartphones Mobiles (Portrait)
+// ##Screen = B/w 360px to 479px
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .wheel-colorpicker-wrapper {
+    .aside {
+      align-items: flex-start;
+      row-gap: 15px;
+      flex-direction: column;
+    }
+  }
+} //  360px to 480px (Portrait) Dont delete this bracket!

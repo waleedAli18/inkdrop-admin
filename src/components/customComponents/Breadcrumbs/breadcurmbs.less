@@ -1,0 +1,91 @@
+@import url(../../../assets/styles/variables.less);
+.breadcurmbsSec {
+  margin-bottom: 10px;
+  .kl-custom-heading {
+    display: block;
+    height: 100%;
+    h5.primary-heading {
+      margin-bottom: 0;
+    }
+  }
+  .primary-heading {
+    color: @black-color;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .backbtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin-right: 10px;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+    svg path {
+      transition: all ease-in-out 0.3s;
+      fill: @primary-color;
+    }
+    &:hover {
+      svg path {
+        fill: @black-color !important;
+      }
+    }
+  }
+  .breadcrumb-center-icon {
+    margin: 0px 5px;
+  }
+}
+
+// MEDIA QUERY STARTS
+
+// ##Device = HD Desktops
+// ##Screen = 1600px to higher resolution desktops
+
+@media screen and (min-width: 1600px) {
+} // Dont delete this bracket!
+
+// ##Device = Ipads, Ipad Pro
+// ##Screen = B/w 1024px to 1365px
+@media (min-width: 1024px) and (max-width: 1365px) {
+} //  1024px to 1365px Dont delete this bracket!
+
+// ##Device = Tablets, Ipads
+// ##Screen = B/w 768px to 1023px
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .breadcurmbsSec {
+    .kl-custom-heading {
+      h5.primary-heading {
+        margin-bottom: 15px;
+      }
+    }
+  }
+} //  768px to 1023px  Dont delete this bracket!
+
+// ##Device = Low Resolution Tablets, Mobiles (Landscape)
+// ##Screen = B/w 481px to 767px
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .breadcurmbsSec {
+    .kl-custom-heading {
+      h5.primary-heading {
+        margin-bottom: 15px;
+      }
+    }
+  }
+} //  481px to 767px (Landscape) Dont delete this bracket!
+
+// ##Device = Most of the Smartphones Mobiles (Portrait)
+// ##Screen = B/w 360px to 479px
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .breadcurmbsSec {
+    .kl-custom-heading {
+      h5.primary-heading {
+        margin-bottom: 15px;
+      }
+    }
+  }
+} //  360px to 480px (Portrait) Dont delete this bracket!

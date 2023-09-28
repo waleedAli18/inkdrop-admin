@@ -1,0 +1,190 @@
+@import url(../../../../assets/styles/variables.less);
+
+.edit-profile-wrapper {
+  padding: 20px 80px;
+
+  .disabled-head {
+    background: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 10px;
+    h5 {
+      color: #595959;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin: 0;
+    }
+  }
+  .profile-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .image-uploader {
+      position: relative;
+      gap: 25px;
+      align-items: flex-end;
+      height: 230px;
+      width: 230px;
+      border-radius: 100% !important;
+      overflow: hidden;
+      border: 5px solid #d9d9d9;
+
+      .ant-upload-select-picture {
+        opacity: 1;
+        bottom: 0 !important;
+        top: unset !important;
+        height: unset !important;
+        .image-uploader-btn {
+          background: rgba(136, 136, 136, 0.6);
+          width: 100%;
+          border-radius: 0 !important;
+          border: none !important;
+          height: 50px;
+          svg {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+  .head {
+    h5 {
+      text-align: center;
+      color: @black-color;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 60px;
+    }
+  }
+
+  form {
+    .with-label {
+      margin-bottom: 25px;
+      .ant-row {
+        display: block;
+        flex-direction: column;
+      }
+    }
+    .ant-form-item-label {
+      label {
+        text-align: left;
+        color: @black-color;
+        font-style: normal;
+        margin-right: 15px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: normal;
+        min-width: 60px;
+        height: 100%;
+        &::before {
+          display: none !important;
+        }
+      }
+    }
+
+    .ant-input,
+    .ant-input-number-input,
+    .ant-picker {
+      background: #ffffff;
+      box-shadow: unset;
+      padding: 25px 20px !important;
+      line-height: unset;
+      height: 50px;
+      border-radius: 7px;
+      border: 1px solid #d0d0d0;
+
+      #loginForm_password,
+      #signUpForm_password,
+      #signUpForm_confirmPassword,
+      #resetPasswordForm_password,
+      #resetPasswordForm_newPassword {
+        min-height: unset;
+        padding: unset !important;
+        background: unset !important;
+        box-shadow: unset;
+        height: unset;
+        border-radius: unset;
+        min-height: unset;
+      }
+    }
+
+    .PhoneInput {
+      background: #ffffff !important;
+      padding: 0 10px 0 10px !important;
+      min-height: unset !important;
+      margin: 0 !important;
+      box-shadow: unset;
+      border-radius: 7px;
+      border: 1px solid #d0d0d0;
+
+      input {
+        background: unset !important;
+        box-shadow: unset;
+        border: unset !important;
+        outline: unset !important;
+      }
+    }
+
+    .ant-checkbox-wrapper {
+      span {
+        line-height: 1.3;
+        color: @black-color;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+      }
+    }
+
+    button[type="submit"] {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 14px !important;
+      text-transform: uppercase !important;
+      margin-top: 50px;
+    }
+
+    p.already-have-account {
+      text-align: center;
+      // color: $primaryColor;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      & button {
+        all: unset;
+        cursor: pointer;
+        text-decoration: underline !important;
+        // color: $primaryColor;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline;
+        text-transform: capitalize;
+        transition: all 0.4s ease-in-out;
+        // border-bottom: 1px solid $primaryColor !important;
+        margin-left: 3px;
+        line-height: 1;
+        background: unset !important;
+        &:hover {
+          color: @black-color !important;
+        }
+        &:disabled {
+          cursor: not-allowed;
+        }
+      }
+    }
+    .ant-form-item-explain-error {
+      padding-left: 15px;
+    }
+
+    .forgot-pass {
+      text-align: right;
+      margin-bottom: 30px;
+    }
+  }
+}

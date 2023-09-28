@@ -1,0 +1,343 @@
+@import url("../../assets/styles/variables.less");
+
+.profile-dropdown {
+  top: 60px;
+  z-index: 99999999999 !important;
+  ul {
+    width: 290px;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0px 0px 16.39069px 0px rgba(0, 0, 0, 0.14) !important;
+    li {
+      line-height: 1 !important;
+      padding-top: 0;
+      padding-bottom: 0;
+      a {
+        cursor: pointer;
+        padding: 15px 0px;
+        display: inline-block;
+        width: 100%;
+        border-bottom: 1px solid #b5b5b5;
+        color: #5c2d4f;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span {
+          display: flex;
+          align-items: center;
+          color: @black-color;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        svg {
+          margin-right: 14px;
+          transition: all ease-in-out 0.3s;
+          font-size: 18px;
+        }
+      }
+      &:last-child a {
+        border-bottom: none;
+      }
+      // &.logout a {
+      //   color: #df6262;
+      // }
+      &:hover {
+        background-color: @light-primary-color;
+        a {
+          color: @white-color;
+          border-color: @light-primary-color;
+          span {
+            color: @white-color;
+          }
+          svg {
+            path {
+              fill: @white-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.topbar-sec {
+  position: relative;
+  background-color: @dashboard-header-bg !important;
+  height: 80px !important;
+  .user-profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    gap: 15px;
+    &__profile-detail {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      svg {
+        margin-left: 5px;
+        font-size: 10px;
+        transition: all ease-in-out 0.3s;
+      }
+      &.active {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &__notification {
+      position: relative;
+      cursor: pointer;
+      margin-right: 15px;
+      &-icon {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      img {
+        width: 100%;
+      }
+      span {
+        border-radius: 50px;
+        color: #ffffff;
+        background-color: #c62929;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 12px;
+        height: 12px;
+        font-size: 8px;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &__dropdown {
+        position: absolute;
+        background-color: @white-color;
+        border-radius: 10px;
+        max-height: 400px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.137);
+        top: 110%;
+        left: auto;
+        transform: translateX(-13%) translateY(-10%) scale(0);
+        padding: 0;
+        max-width: 346px;
+        opacity: 0.5;
+        transform-origin: top right;
+        transition: 0.3s ease-in-out;
+        visibility: hidden;
+        z-index: 999;
+        border-radius: 5px;
+
+        &__btn {
+          margin-right: 0.5rem;
+          background-color: @primary-color;
+
+          &:hover {
+            color: @white-color;
+          }
+        }
+
+        &.notifications {
+          transform: translateX(-65%) translateY(-10%) scale(0);
+          width: 350px;
+          right: 0;
+          min-height: 150px;
+          padding: 30px 20px;
+          .notification-list {
+            width: auto;
+            padding: 0;
+            margin: 0;
+            li {
+              transition: all 0.4s ease-in-out;
+              &:hover {
+                background-color: #f0f2f57a !important;
+                padding-left: 5px;
+              }
+              a {
+                cursor: pointer;
+                color: #02080e;
+                font-size: 13px;
+                font-weight: 400;
+                padding: 15px 0px;
+                border-bottom: unset;
+                font-family: "Poppins";
+                display: inline-block;
+                width: 100%;
+                span {
+                  display: block;
+                  font-size: 12px;
+                  font-weight: 400;
+                  color: #87878b !important;
+                  line-height: 1;
+                  margin-top: 8px;
+                }
+              }
+            }
+          }
+          .head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            .switch-toggle {
+              line-height: 1;
+            }
+
+            h5 {
+              margin: 0;
+              line-height: 1;
+            }
+          }
+          &.active {
+            transform: translateX(-60%) translateY(0%) scale(1);
+          }
+        }
+        &.active {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(-13%) translateY(0%) scale(1);
+        }
+        ul {
+          width: 145px;
+          padding: 0;
+          margin: 0;
+          padding-left: 12px;
+          padding-right: 12px;
+
+          li {
+            line-height: 1;
+            position: relative;
+            list-style: none;
+            a {
+              cursor: pointer;
+              color: #555b6d;
+              font-size: 12px;
+              font-weight: 400;
+              padding: 15px 0px;
+              border-bottom: 1px solid #555b6d45;
+              font-family: "Poppins";
+              display: inline-block;
+              width: 100%;
+            }
+            &:last-child a {
+              border-bottom: none;
+            }
+            &.logout a {
+              color: #df6262;
+            }
+
+            &.unred {
+              position: relative;
+              &::after {
+                content: "";
+                position: absolute;
+                right: 10px;
+                top: calc(50% - 5px);
+                width: 12px;
+                height: 12px;
+                border-radius: 50px;
+                background-color: @primary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__user {
+      color: @topbar-text-color;
+      img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        // margin-right: 10px;
+        object-fit: cover;
+        border: 5px solid #fff;
+      }
+    }
+
+    .ant-dropdown-trigger {
+      .ant-space-item {
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+
+    &__details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      &-name {
+        font-weight: 500;
+        font-size: 14px;
+      }
+      &-role {
+        color: @danger-color;
+        font-size: 10px;
+      }
+    }
+  }
+  .gx-linebar {
+    background-color: @sidebar-text-color;
+    width: 38px;
+    height: 38px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    transition: all ease-in-out 0.3s;
+    .gx-icon-btn:focus,
+    .gx-icon-btn:hover {
+      background: none;
+    }
+    &:hover {
+      background-color: @primary-color;
+    }
+  }
+}
+
+// MEDIA QUERY STARTS
+
+// ##Device = HD Desktops
+// ##Screen = 1600px to higher resolution desktops
+
+@media screen and (min-width: 1600px) {
+} // Dont delete this bracket!
+
+// ##Device = Ipads, Ipad Pro
+// ##Screen = B/w 1024px to 1365px
+@media (min-width: 1024px) and (max-width: 1365px) {
+} //  1024px to 1365px Dont delete this bracket!
+
+// ##Device = Tablets, Ipads
+// ##Screen = B/w 768px to 1023px
+
+@media (min-width: 768px) and (max-width: 1023px) {
+} //  768px to 1023px  Dont delete this bracket!
+
+// ##Device = Low Resolution Tablets, Mobiles (Landscape)
+// ##Screen = B/w 481px to 767px
+
+@media (min-width: 481px) and (max-width: 767px) {
+} //  481px to 767px (Landscape) Dont delete this bracket!
+
+// ##Device = Most of the Smartphones Mobiles (Portrait)
+// ##Screen = B/w 360px to 479px
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .profile-dropdown {
+    left: unset !important;
+    right: 20px !important;
+  }
+} //  360px to 480px (Portrait) Dont delete this bracket!

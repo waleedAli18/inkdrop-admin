@@ -1,0 +1,27 @@
+@import url(../../../assets/styles/variables.less);
+
+.switchStyling {
+  min-width: 45px !important;
+  height: 28px !important;
+  background-color: #737373 !important;
+  .ant-switch-handle {
+    top: 3px;
+    left: 2px;
+    width: 22px !important;
+    height: 22px !important;
+    &::before {
+      border-radius: 80px !important;
+    }
+  }
+
+  &.ant-switch-checked .ant-switch-handle {
+    left: calc(100% - 18px - 6px) !important;
+  }
+  .ant-switch {
+    background-color: @black-color !important;
+  }
+}
+
+.ant-switch-checked {
+  background-color: @primary-color !important;
+}

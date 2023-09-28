@@ -1,0 +1,64 @@
+@import url("../../../assets/styles/variables.less");
+.custom-status-box {
+  background-color: @doprdown-bg-color !important;
+  border: 0 !important;
+  color: @doprdown-text-color !important;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: inline-flex;
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 14px;
+  letter-spacing: -0.14px;
+  min-width: 95px;
+
+  &.in-progress {
+    background-color: rgba(251, 126, 21, 0.2) !important;
+    color: @inprogress-color !important;
+  }
+  &.in_progress {
+    background-color: rgba(251, 126, 21, 0.2) !important;
+    color: @inprogress-color !important;
+  }
+  &.in_process {
+    background-color: #ffdd9a !important;
+    color: @inprocess-color !important;
+  }
+  &.completed,
+  &.conducted,
+  &.paid {
+    background-color: #8fffc9 !important;
+    color: @completed-color !important;
+  }
+  &.active {
+    background-color: #8fffc9 !important;
+    color: #007c41 !important;
+  }
+  &.pending {
+    background-color: @pending-status-bg-color !important;
+    color: @pending-status-text-color !important;
+  }
+  &.rejected {
+    background-color: @rejected-bg-color !important;
+    color: @rejected-text-color !important;
+  }
+  &.approved {
+    background-color: @approved-bg-color !important;
+    color: @approved-text-color !important;
+  }
+  &.confirmed {
+    background-color: @confirmed-bg-color !important;
+    color: @confirmed-text-color !important;
+  }
+  &.cancelled,
+  &.due {
+    background-color: @cancelled-bg-color !important;
+    color: @cancelled-text-color !important;
+  }
+}

@@ -1,0 +1,43 @@
+@import url(../../../assets/styles/variables.less);
+
+.designCardWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  .customCard {
+    border-radius: 8px;
+    box-shadow: unset;
+    border: none;
+    height: 200px;
+    cursor: pointer;
+    .ant-card-body {
+      padding-left: 0;
+      padding-right: 0;
+      h3 {
+        color: @black-color;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      p.designedBy {
+        color: @light-gray;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 12px;
+      }
+    }
+
+    .ant-card-cover {
+      height: 100%;
+      img {
+        object-fit: cover;
+        border-radius: 25px;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

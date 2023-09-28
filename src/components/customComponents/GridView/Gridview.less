@@ -1,0 +1,260 @@
+@import url("../../../assets/styles/variables.less");
+.topHeader {
+  background-color: @white-color;
+  padding: 15px;
+  .search-filter {
+    display: flex;
+    align-items: center;
+    .kl-custom-search-container {
+      width: 35%;
+      margin-right: 10px;
+      .ant-input-group {
+        width: 100% !important;
+      }
+      .ant-input-affix-wrapper {
+        min-height: unset;
+        border-radius: 0 !important;
+        padding: 2px 11px;
+        input.ant-input {
+          line-height: normal;
+          &::placeholder {
+            color: #74788d;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+  .topheader-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+.search-form {
+  .custom-form-item {
+    .ant-row {
+      display: block;
+    }
+    label {
+      font-size: 14px;
+      height: auto;
+      color: @sidebar-active-color;
+      margin-bottom: 10px;
+    }
+    .ant-select-selector {
+      border-radius: 10px !important;
+      input {
+        padding-left: 7px !important;
+      }
+    }
+  }
+  .ant-col {
+    padding-right: 0px !important;
+    input {
+      padding: 13px 0px 13px 22px;
+      border-radius: 10px;
+    }
+  }
+  .btnStyling {
+    height: 46px;
+    border-radius: 10px;
+    padding: 8px 30px;
+    display: flex;
+    align-items: center;
+    svg {
+      font-size: 15px;
+    }
+    &:hover {
+      border-color: @header-text-color !important;
+      background-color: @header-text-color !important;
+      opacity: 1 !important;
+      color: @white-color !important;
+    }
+  }
+  .form-field-sec {
+    .form-field {
+      padding-left: 10px !important;
+    }
+
+    .parent {
+      padding-left: 0px !important;
+    }
+  }
+}
+.custom-table-grid-view-container {
+  .custom-table-container-with-hover {
+    .ant-table-tbody tr:hover {
+      cursor: pointer;
+    }
+  }
+  .custom-table-container {
+    font-family: @primary-font-family;
+    .ant-table-content {
+      .ant-pagination {
+        .ant-table-pagination {
+          li {
+            margin: 0px;
+          }
+        }
+      }
+      width: 100%;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        width: 3px;
+        background-color: @grid-box-shadow;
+        -webkit-border-radius: 100px;
+      }
+
+      &::-webkit-scrollbar:hover {
+        background-color: @scrollbar-color;
+      }
+
+      &::-webkit-scrollbar-thumb:vertical {
+        background: @scrollbar-thumb-color;
+        -webkit-border-radius: 100px;
+      }
+
+      &::-webkit-scrollbar-thumb:vertical:active {
+        background: @scrollbar-thumb-color-active;
+        -webkit-border-radius: 100px;
+      }
+
+      &::-webkit-scrollbar-thumb:horizontal {
+        background: @scrollbar-thumb-color;
+        -webkit-border-radius: 100px;
+      }
+
+      &::-webkit-scrollbar-thumb:horizontal:active {
+        background: @scrollbar-thumb-color-active;
+        -webkit-border-radius: 100px;
+      }
+    }
+    .ant-table {
+      border-radius: 0px !important;
+      color: @sidebar-active-color;
+    }
+    .ant-table-thead > {
+      tr > {
+        th {
+          color: @white-color;
+          font-weight: 500;
+          background-color: @table-header-color;
+          padding: 10px 15px;
+          color: @black-color;
+          font-weight: 600;
+          border-right: 0px !important;
+        }
+      }
+    }
+    .ant-table.ant-table-bordered > {
+      .ant-table-container {
+        > .ant-table-content {
+          > table {
+            > tbody {
+              > tr {
+                > td {
+                  border-right: 0px solid @table-row-background;
+                  border-bottom-color: @table-border-color;
+
+                  &:first-child {
+                    padding-left: 25px !important;
+                  }
+                  &:last-child {
+                    padding-right: 25px !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+        table > {
+          thead > {
+            tr:first-child {
+              th:first-child {
+                padding-left: 25px !important;
+              }
+              th:last-child {
+                padding-right: 25px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // global css
+  .action-btn {
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
+    &:hover {
+      opacity: 0.5 !important;
+    }
+  }
+  .btnEdit {
+    background-color: @edit-btn;
+  }
+  .btnEdit:hover,
+  .btnEdit:focus {
+    color: @white-color;
+  }
+
+  .btnSucess {
+    background-color: @success-Color;
+  }
+
+  .btnDanger {
+    background-color: @danger-color;
+  }
+  .btnYellow {
+    background-color: @yellow-Color;
+  }
+
+  .btnDownload {
+    background-color: @gray-color;
+  }
+
+  .nameList {
+    color: @custom-link-color;
+  }
+
+  .dangerText {
+    color: @danger-color;
+  }
+
+  .success {
+    color: @success-Color;
+  }
+
+  .textWhite {
+    color: @white-color;
+  }
+  .action-col {
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 0px;
+      svg {
+        padding: 0px;
+        border: 0px;
+        font-size: 16px;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .btnEdit {
+      background-color: @primary-color;
+    }
+    .btnDanger {
+      i {
+        &.tod-refund {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

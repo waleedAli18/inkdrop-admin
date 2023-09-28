@@ -1,0 +1,35 @@
+// @import url("../../../assets/styles/variables.less");
+
+.kl-custom-heading {
+  .primary-heading {
+    font-family: @primary-font-family;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .second-heading {
+    font-family: @primary-font-family;
+    font-size: 24px;
+  }
+  .auth-heading {
+    font-size: 36px;
+  }
+  .big-heading {
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 700;
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 1024px) {
+  .kl-custom-heading {
+    .auth-heading {
+      font-size: 25px;
+      text-align: center;
+    }
+    .big-heading {
+      font-size: 35px;
+      line-height: 45px;
+      text-align: center;
+    }
+  }
+}
