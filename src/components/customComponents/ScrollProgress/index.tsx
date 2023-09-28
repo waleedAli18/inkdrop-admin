@@ -51,7 +51,7 @@ const ScrollProgressBar: React.FC = () => {
     borderTopRightRadius: scrollProgress === 100 ? 0 : 50,
     borderBottomRightRadius: scrollProgress === 100 ? 0 : 50,
     opacity: scrollProgress / 30,
-    transition: "all .05s ease-in-out",
+    // transition: "all .05s ease-in-out",
   };
 
   return <div className="progressBar" style={progressBarStyle}></div>;
